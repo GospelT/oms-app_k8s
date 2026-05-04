@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: backend-deployment
+  namespace: oms
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: backend-app
+
+  template:
+    metadata:
+      labels:
+        app: backend-app
+
+    spec:
+      containers:
+      - name: backend-container
+        image: gospelt14/oms-app-backend:latest
+        
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
+        ports:
+        - containerPort: 5000
