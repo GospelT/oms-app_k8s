@@ -1,6 +1,3 @@
-Here’s a simple README.txt you can add to your OMS Kubernetes project 👇
-
-README.txt
 OMS App - Kubernetes Deployment
 
 This project contains Kubernetes YAML files for deploying a simple OMS (Order Management System) application.
